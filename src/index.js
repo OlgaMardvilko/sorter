@@ -1,22 +1,22 @@
 class Sorter {
   constructor() {
-    // your implementation
+    this.elements = [];
   }
 
   add(element) {
-    // your implementation
+   return this.elements.push(element);
   }
 
   at(index) {
-    // your implementation
+    return this.elements[index];
   }
 
   get length() {
-    // your implementation
+    return this.elements.length;
   }
 
   toArray() {
-    // your implementation
+    return this.elements;
   }
 
   sort(indices) {
