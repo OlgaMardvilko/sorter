@@ -1,10 +1,11 @@
 class Sorter {
   constructor() {
     this.elements = [];
+  
   }
 
   add(element) {
-   return this.elements.push(element);
+   this.elements.push(element);
   }
 
   at(index) {
@@ -20,7 +21,14 @@ class Sorter {
   }
 
   sort(indices) {
-    // your implementation
+    let arr = [];
+    for (let i =0; i<indices.length; i++){
+      arr.push(this.elements[indices[i]]);
+    }
+    arr.sort();
+    for (let i =0; i<arr.length; i++){
+      this.elements[indices[i]] = arr[i];
+    }
   }
 
   setComparator(compareFunction) {
